@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const API_URL = (import.meta.env.VITE_API_URL || 'http://localhost:8000').replace(
+const API_URL = (import.meta.env.VITE_API_URL || 'https://invitacion-boda-v24a.onrender.com').replace(
   /\/+$/,
   '',
 )
