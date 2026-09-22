@@ -1,9 +1,11 @@
+import invitacion from '../assets/invitacion.jpeg'
+
 export default function Invitation() {
   return (
     <header className="invitation">
       <img
         className="invitation__image"
-        src="/invitacion.jpeg"
+        src={invitacion}
         alt="Invitación de la boda"
         width="1200"
         height="1600"
