@@ -1,4 +1,25 @@
-export default function ConfirmationMessage({ name, attendance }) {
+export default function ConfirmationMessage({ name, attendance, alreadyResponded = false }) {
+  // Este navegador ya tenía una respuesta guardada: se recuerda el nombre
+  // y se avisa de que no hace falta volver a responder.
+  if (alreadyResponded) {
+    return (
+      <div className="confirmation" role="status" aria-live="polite">
+        <span className="confirmation__mark" aria-hidden="true">
+          ❦
+        </span>
+
+        <h2 className="confirmation__title">
+          {name}, tu respuesta ya fue registrada.
+        </h2>
+        <p className="confirmation__text">
+          {attendance
+            ? `${name}, tu asistencia ya fue confirmada. 💚`
+            : `${name}, hemos registrado que no podrás asistir. 💚`}
+        </p>
+      </div>
+    )
+  }
+
   return (
     <div className="confirmation" role="status" aria-live="polite">
       <span className="confirmation__mark" aria-hidden="true">
