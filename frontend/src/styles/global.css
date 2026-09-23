@@ -327,6 +327,16 @@ img {
   cursor: not-allowed;
 }
 
+/* Nota discreta bajo el botón: la respuesta no se puede modificar */
+.form__note {
+  margin: -0.5rem 0 0;
+  text-align: center;
+  font-size: 0.8125rem;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  color: #a4553f;
+}
+
 /* --------------------------------------------------------------------------
    Mensaje de confirmación
    -------------------------------------------------------------------------- */

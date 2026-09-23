@@ -117,6 +117,10 @@ export default function RSVPForm({ onSubmitted }) {
       <button className="button" type="submit" disabled={submitting}>
         {submitting ? 'Enviando…' : 'Enviar'}
       </button>
+
+      <p className="form__note">
+        Esta respuesta no puede ser modificada una vez enviada.
+      </p>
     </form>
   )
 }
