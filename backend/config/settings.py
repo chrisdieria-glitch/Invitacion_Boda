@@ -130,9 +130,9 @@ REST_FRAMEWORK = {
 # CORS / CSRF
 # ---------------------------------------------------------------------------
 CORS_ALLOWED_ORIGINS = get_list(
-    "CORS_ALLOWED_ORIGINS", "http://localhost:5173","https://chrisdieria-glitch.github.io"
+    "CORS_ALLOWED_ORIGINS","https://chrisdieria-glitch.github.io"
 )
-CSRF_TRUSTED_ORIGINS = get_list("CSRF_TRUSTED_ORIGINS", "http://localhost:5173","https://chrisdieria-glitch.github.io")
+CSRF_TRUSTED_ORIGINS = get_list("CSRF_TRUSTED_ORIGINS","https://chrisdieria-glitch.github.io")
 
 # Se envía la cabecera que el navegador necesita para leer la respuesta JSON.
 CORS_ALLOW_CREDENTIALS = False
