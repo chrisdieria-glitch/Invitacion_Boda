@@ -4,6 +4,7 @@ Configuración del proyecto de la invitación de boda.
 Todos los valores que pueden cambiar entre entornos (secretos, DEBUG,
 orígenes de CORS) se leen desde variables de entorno y del archivo .env.
 """
+import dj_database_url
 import os
 from pathlib import Path
 
@@ -81,11 +82,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    "default": dj_database_url.config(
+        default=os.environ.get("DATABASE_URL")
+    )
 }
 
 AUTH_PASSWORD_VALIDATORS = [
