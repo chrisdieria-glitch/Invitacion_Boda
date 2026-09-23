@@ -44,6 +44,7 @@ export default function RSVPForm({ onSubmitted }) {
         onSubmitted({ name: cleanName, attendance })
       })
       .catch((err) => {
+        console.error('Error enviando RSVP:', err)
         setError(
           err.message === 'Failed to fetch'
             ? 'No se pudo conectar con el servidor. Inténtalo de nuevo.'
